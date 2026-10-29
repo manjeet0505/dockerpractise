@@ -4,7 +4,7 @@ const { MongoClient } = require("mongodb");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const MONGO_URL = process.env.MONGO_URL || "mongodb://admin:password@localhost:27017";
+const MONGO_URL = process.env.MONGO_URL || "mongodb://admin:password@mongodb:27017/mydatabase?authSource=admin";
 const DB_NAME = "user-account";
 
 const client = new MongoClient(MONGO_URL);
